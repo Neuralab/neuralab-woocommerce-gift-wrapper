@@ -1,0 +1,87 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Neuralab Gift Wrap\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-22 12:00+0000\n"
+"PO-Revision-Date: 2017-12-22 12:03+0000\n"
+"Last-Translator: Petak <petak@neuralab.net>\n"
+"Language-Team: Croatian\n"
+"Language: hr\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: neuralab-gift-wrap.php:67
+msgid "Feedback"
+msgstr "Kontakt"
+
+#: neuralab-gift-wrap.php:109
+msgid "Apply tax rates to gift wrapping"
+msgstr "Primjeni poreze na zamatanje poklona"
+
+#: neuralab-gift-wrap.php:122
+msgid ""
+"You can provide feedback or comments on plugin's <a href=\"#\">GitHub "
+"repo</a>."
+msgstr "Slobodno javite komentare na <a href=\"#\">GitHub repozitorij</a>."
+
+#: neuralab-gift-wrap.php:131
+msgid "Gift Wrapper"
+msgstr "Zamatanje poklona"
+
+#: neuralab-gift-wrap.php:143
+msgid "Neuralab WooCommerce Gift Wrapper Settings"
+msgstr "Neuralab WooCommerce Gift Wrapper postavke"
+
+#: neuralab-gift-wrap.php:64
+msgid "Enable"
+msgstr "Omogući"
+
+#: neuralab-gift-wrap.php:65
+msgid "Price"
+msgstr "Cijena"
+
+#: neuralab-gift-wrap.php:66
+msgid "Tax"
+msgstr "Porez"
+
+#: neuralab-gift-wrap.php:82
+msgid "Enable gift wrapping"
+msgstr "Omogući zamatanje poklona"
+
+#: neuralab-gift-wrap.php:110
+msgid "(Be sure to enable tax in WooCommerce settings)"
+msgstr "(Provjerite da li je porez omogućen u WooCommerce postavkama)"
+
+#: neuralab-gift-wrap.php:180
+msgid "Add Gift Wrapping"
+msgstr "Dodaj zamatanje poklona"
+
+#: neuralab-gift-wrap.php:186
+#, php-format
+msgid "Wrap as a gift (%s)"
+msgstr "Zamotaj kao poklon (%s)"
+
+#: neuralab-gift-wrap.php:295 neuralab-gift-wrap.php:323
+msgid "Gift Wrap"
+msgstr "Zamatanje poklona"
+
+#. Name of the plugin
+msgid "Neuralab WooCommerce Gift Wrapper"
+msgstr "Neuralab WooCommerce Gift Wrapper"
+
+#. Description of the plugin
+msgid "Simple plugin which offers gift wrap for bought merchandise"
+msgstr ""
+"Jednostavan dodatak koji omogućava zamatanje kupljenog sadržaja u poklon."
+
+#. Author of the plugin
+msgid "Petak @ Neuralab"
+msgstr "Petak @ Neuralab"
+
+#. Author URI of the plugin
+msgid "neuralab.net"
+msgstr "neuralab.net"

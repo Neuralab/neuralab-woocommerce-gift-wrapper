@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<ruleset name="Neuralab">
+  <description>Neuralab coding standards for WP development</description>
+  <!-- See https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml -->
+  <!-- https://github.com/infinum/coding-standards-wp/blob/master/Infinum/ruleset.xml -->
+  <!-- https://github.com/humanmade/coding-standards/blob/master/HM/ruleset.xml -->
+
+  <!-- Can not set this since Wordpress-Core standard redefines it :/
+  Hardcode it there if you want to beautify arrays with 2 spaces instead of 4
+  WordPress-Core/ruleset.xml line 11 -->
+  <arg name="tab-width" value="2"/>
+
+  <rule ref="WordPress">
+
+    <!-- I think this is a buggy check so I removed it -->
+    <exclude name="WordPress.CSRF.NonceVerification.FoundPropertyForDeprecatedSniff" />
+
+    <!-- Allow simple echo - this rule was too restrictive -->
+    <exclude name="WordPress.Security.EscapeOutput.OutputNotEscaped" />
+
+    <!-- Allow space indent! -->
+    <exclude name="Generic.WhiteSpace.DisallowSpaceIndent" />
+    <!-- Don't force file comments -->
+    <exclude name="Squiz.Commenting.FileComment"/>
+    <exclude name="Squiz.PHP.EmbeddedPhp.NoSemicolon"/>
+
+    <exclude name="Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma"/>
+    <!-- remove translation comment rules -->
+    <exclude name="WordPress.WP.I18n.TranslatorsCommentWrongStyle"/>
+    <exclude name="WordPress.WP.I18n.MissingTranslatorsComment"/>
+
+
+    <!-- other comment excludes -->
+    <exclude name="Squiz.Commenting.FunctionComment" />
+    <exclude name="Squiz.Commenting.VariableComment" />
+  </rule>
+
+  <rule ref="WordPress-VIP">
+		<!-- Remove VIP specific stuff -->
+		<exclude name="WordPress.VIP.FileSystemWritesDisallow" />
+		<exclude name="WordPress.VIP.RestrictedFunctions" />
+		<exclude name="WordPress.VIP.RestrictedVariables" />
+		<exclude name="WordPress.VIP.SuperGlobalInputUsage" />
+		<exclude name="WordPress.VIP.ValidatedSanitizedInput" />
+		<exclude name="WordPress.VIP.DirectDatabaseQuery" />
+		<exclude name="WordPress.XSS.EscapeOutput" />
+
+    <!-- Not always useful, so no.. -->
+    <exclude name="WordPress.Arrays.ArrayIndentation.CloseBraceNotAligned" />
+
+    <!-- Remove Yoda -->
+		<exclude name="WordPress.PHP.YodaConditions" />
+	</rule>
+
+  <!-- Whitespace - indent with 2 spaces, dissalow tabs -->
+  <rule ref="Generic.WhiteSpace.ScopeIndent">
+    <properties>
+      <property name="indent" value="2"/>
+      <!--
+      Enforcing exact indent checking is generally not advised because it
+      doesn't allow for any flexibility when indenting and aligning code.
+      It is almost always better to use the default value and then allow other
+      sniffs to enforce specific indenting rules.
+      -->
+      <property name="exact" value="false"/>
+      <property name="tabIndent" value="false"/>
+      <property name="ignoreIndentationTokens" type="array" value="T_HEREDOC,T_NOWDOC,T_INLINE_HTML"/>
+    </properties>
+  </rule>
+
+  <rule ref="Generic.WhiteSpace.DisallowTabIndent" />
+  <rule ref="PEAR.Functions.FunctionCallSignature">
+    <properties>
+      <property name="indent" value="2"/>
+    </properties>
+  </rule>
+
+  <!-- set switch indent to 2 instead of 4 -->
+  <rule ref="PSR2.ControlStructures.SwitchDeclaration">
+    <properties>
+      <property name="indent" value="2"/>
+    </properties>
+  </rule>
+
+  <!-- Inline Statements: Single statement on same line -->
+  <rule ref="Generic.Formatting.DisallowMultipleStatements"/>
+
+  <!-- Warn if long syntax arrays -->
+  <rule ref="Generic.Arrays.DisallowLongArraySyntax">
+    <type>warning</type>
+  </rule>
+
+</ruleset>
